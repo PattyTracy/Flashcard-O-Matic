@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Flashcard-O-Matic/static/css/main.9f87030d.css",
+    "main.js": "/Flashcard-O-Matic/static/js/main.e67a4033.js",
+    "index.html": "/Flashcard-O-Matic/index.html",
+    "main.9f87030d.css.map": "/Flashcard-O-Matic/static/css/main.9f87030d.css.map",
+    "main.e67a4033.js.map": "/Flashcard-O-Matic/static/js/main.e67a4033.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f87030d.css",
+    "static/js/main.e67a4033.js"
+  ]
+}
