@@ -1,2 +1,2 @@
 # Flashcard-O-Matic
-Flashcard App created for Thinkful Module 31
+Created using JSX, Node.js and React. 
