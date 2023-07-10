@@ -45,11 +45,12 @@ function OneCard() {
       setCardSide("front");
     } else {
       const result = window.confirm(
-        `Reset cards for ${deck.name}? /n /n Clicking "cancel" will bring you back to the home page.`
+        `Reset cards for ${deck.name}?  Clicking "cancel" will bring you back to the home page.`
       );
       if (result) {
         setCardSide("front");
         setCount(0);
+        history.push(`/decks/${deck.id}/study`);
       } else {
         history.go(0);
       }

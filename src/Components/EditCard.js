@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
 import { readDeck, readCard, updateCard } from "../utils/api/index.js";
+import CardForm from "../Components/CardForm.js"
 
 function EditCard() {
   const { deckId } = useParams();
@@ -57,40 +58,12 @@ function EditCard() {
       </div>
       <div className="container">
         <h2>Edit Card</h2>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="front">Front</label>
-          <br></br>
-          <textarea
-            className="container fluid mb-3"
-            id="front"
-            name="front"
-            rows={4}
-            onChange={handleChange}
-            value={card.front}
-          />
-          <br></br>
-          <label htmlFor="back">Back</label>
-          <br></br>
-          <textarea
-            className="container fluid"
-            id="back"
-            name="back"
-            rows={4}
-            onChange={handleChange}
-            value={card.back}
-          />
-        
-        <div className="row">
-          <Link to={`/decks/${deck.id}`}>
-            <button type="button" className="btn btn-secondary">
-              Cancel
-            </button>
-          </Link>
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
-        </div>
-        </form>
+        <CardForm
+          deck={deck}
+          card={card}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
       </div>
     </>
   );
