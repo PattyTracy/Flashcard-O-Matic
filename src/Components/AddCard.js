@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { readDeck, updateDeck, createCard } from "../utils/api/index.js";
+import { Link, useParams, useHistory } from "react-router-dom";
+import { readDeck, createCard } from "../utils/api/index.js";
 import CardForm from "../Components/CardForm.js";
 
 function AddCard() {
@@ -10,6 +10,7 @@ function AddCard() {
   const { deckId } = useParams();
   const [deck, setDeck] = useState({});
   const [card, setCard] = useState({});
+  const history = useHistory();
 
   useEffect(() => {
     readDeck(deckId).then(setDeck);
@@ -24,15 +25,10 @@ function AddCard() {
       [target.name]: value,
     });
   };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await createCard({ card, deckId })
-    .then(setCard).then(updateDeck);
-    setCard({
-      front: "",
-      back: "",
-    });
+    createCard(deckId, card);
+    history.go(`/decks/${deckId}/cards/new`);
   };
 
   function Breadcrumb() {

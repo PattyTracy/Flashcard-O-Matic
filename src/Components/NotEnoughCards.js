@@ -11,8 +11,8 @@ function NotEnoughCards({ deck }) {
       </div>
       <div className="row">
         <p>
-          You need at least 3 cards to study. There are `${deck.cards.length}
-          `cards in this deck.
+          You need at least 3 cards to study. There are {deck.cards.length}{" "}
+          cards in this deck.
         </p>
       </div>
       <Link to={`/decks/${deck.id}/cards/new`}>

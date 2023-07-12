@@ -47,12 +47,13 @@ function OneCard() {
       const result = window.confirm(
         `Reset cards for ${deck.name}?  Clicking "cancel" will bring you back to the home page.`
       );
+
       if (result) {
         setCardSide("front");
         setCount(0);
         history.push(`/decks/${deck.id}/study`);
       } else {
-        history.go(0);
+        history.push("/");
       }
     }
   };
@@ -67,7 +68,7 @@ function OneCard() {
         </div>
         <div className="card-text">{cardInfo}</div>
       </div>
-      <div className="row">
+      <div className="row ml-1">
         <button
           type="button"
           className="btn btn-secondary"

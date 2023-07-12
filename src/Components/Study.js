@@ -37,7 +37,7 @@ function Study() {
             <Link to="/">Home</Link>
           </li>
           <li className="breadcrumb-item">
-            <Link to={`/deck/${deckId}`}>{deck.name}</Link>
+            <Link to={`/decks/${deckId}`}>{deck.name}</Link>
           </li>
           <li className="breadcrumb-item"> Study</li>
         </ol>
