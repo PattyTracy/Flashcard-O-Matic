@@ -1,5 +1,5 @@
 {
-  "port": 8080,
+  "port": "https://flashcard-o-matic-delta.vercel.app",
   "watch": true,
   "static": "./docs/api"
 }
